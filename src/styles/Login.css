@@ -1,0 +1,176 @@
+.backGround {
+    min-height: 100vh;
+}
+
+.authForm {
+    width: 320px;
+    margin: auto;
+    border: 8px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Georgia, serif;
+}
+
+.authHead {
+    text-align: center;
+}
+
+
+
+/* referenced from Metty on https://codepen.io/Metty/pen/MWjOavR */
+
+.buttonWrapper {
+    display: inline-flex;
+    height: 45px;
+    width: 100%;
+    transform: translate(-0.7%);
+    margin-top: 25px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    font-family: Roboto, sans-serif;
+}
+
+.buttonWrapper .option {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.buttonWrapper .option .dot {
+    height: 20px;
+    width: 20px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    position: relative;
+}
+
+.buttonWrapper .option .dot::before {
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background: gray;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#student:checked:checked~.student,
+#faculty:checked:checked~.faculty {
+    border-color: gray;
+    background: gray;
+    ;
+}
+
+#student:checked:checked~.student .dot,
+#faculty:checked:checked~.faculty .dot {
+    background: #fff;
+}
+
+#student:checked:checked~.student .dot::before,
+#faculty:checked:checked~.faculty .dot::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.buttonWrapper .option span {
+    font-size: medium;
+    color: #808080;
+}
+
+#student:checked:checked~.student span,
+#faculty:checked:checked~.faculty span {
+    color: #fff;
+}
+
+
+input[type="username"],
+textarea {
+    width: 93%;
+    height: 45px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    font-size: medium;
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    font-family: Roboto, sans-serif;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="dorm"],
+textarea {
+    width: 93%;
+    height: 45px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px !important;
+    font-size: medium;
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.authSubmit {
+    background-color: gray;
+    color: white;
+    padding: 12px 17px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px !important;
+    font-size: large;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.authSubmit:hover {
+    background-color: black;
+}
+
+
+.remind {
+    font-size: 15px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.authLink {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: white;
+    color: #2774AE;
+    text-decoration: none;
+}
